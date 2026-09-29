@@ -26,6 +26,13 @@ class HelloControllerTest {
     @CsvSource({
         "/helloWorld, Hello World",
         "/helloMercury, Hello Mercury",
+        "/helloVenus, Hello Venus",
+        "/helloEarth, Hello Earth",
+        "/helloMars, Hello Mars",
+        "/helloJupiter, Hello Jupiter",
+        "/helloSaturn, Hello Saturn",
+        "/helloUranus, Hello Uranus",
+        "/helloNeptune, Hello Neptune",
     })
     void returnsPlainTextGreeting(String path, String greeting) throws Exception {
         mockMvc.perform(get(path))
@@ -46,13 +53,3 @@ class HelloControllerTest {
             .andExpect(status().isMethodNotAllowed());
     }
 }
-
-/*
-"/helloVenus, Hello Venus",
-"/helloEarth, Hello Earth",
-"/helloMars, Hello Mars",
-"/helloJupiter, Hello Jupiter",
-"/helloSaturn, Hello Saturn",
-"/helloUranus, Hello Uranus",
-"/helloNeptune, Hello Neptune"
-*/
