@@ -25,6 +25,7 @@ class HelloControllerTest {
     @ParameterizedTest(name = "GET {0} returns {1}")
     @CsvSource({
         "/helloWorld, Hello World",
+        "/helloMercury, Hello Mercury",
     })
     void returnsPlainTextGreeting(String path, String greeting) throws Exception {
         mockMvc.perform(get(path))
@@ -45,3 +46,13 @@ class HelloControllerTest {
             .andExpect(status().isMethodNotAllowed());
     }
 }
+
+/*
+"/helloVenus, Hello Venus",
+"/helloEarth, Hello Earth",
+"/helloMars, Hello Mars",
+"/helloJupiter, Hello Jupiter",
+"/helloSaturn, Hello Saturn",
+"/helloUranus, Hello Uranus",
+"/helloNeptune, Hello Neptune"
+*/
