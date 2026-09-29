@@ -1,0 +1,17 @@
+# Gradle caches and build output
+.gradle/
+build/
+bin/
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+
+# macOS
+.DS_Store
