@@ -32,6 +32,10 @@ The controller tests cover all nine greetings, plain-text responses, unknown
 routes, and unsupported POST requests without starting the application.
 The HTML test report is in `build/reports/tests/test/index.html`.
 
+GitHub Actions runs the tests with Java 17 on every branch push and pull request.
+View the results in the repository's **Actions** tab or the pull request checks.
+The workflow is defined in `.github/workflows/tests.yml`.
+
 ## Endpoints
 
 | Browser URL | Response |
